@@ -1,0 +1,31 @@
+class InstanceDemo{
+
+	public static void main(String args[]){
+
+		Object obj[]=new Object[5];
+		
+		obj[0]=10;
+		obj[1]=20.4f;
+		obj[2]=30;
+		obj[3]=new Integer(100);
+		obj[4]=new Float(39.30);
+	
+		int sumOfInt=0;
+		float sumOfFloat=0;
+
+		for(int i=0;i<obj.length;i++){
+
+			if(obj[i] instanceof Integer){
+				
+				sumOfInt=sumOfInt+(int)obj[i];			
+				
+			}else{
+		
+				sumOfFloat=sumOfFloat+(float)obj[i];
+			}
+		}
+		System.out.println("Sum of integer:- "+sumOfInt);
+		System.out.println("Sum of float:- "+sumOfFloat);
+	}
+
+}
